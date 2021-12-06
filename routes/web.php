@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Models\Post;
+use App\Models\Comment;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,8 +62,20 @@ use App\Models\Post;
         /*$fourthPost = Post::find(13);
         dd($fourthPost);*/
 
-        $lastPost = Post::orderBy('id','DESC')->first();
-        dd($lastPost);
+        /*$lastPost = Post::orderBy('id','DESC')->first();
+        dd($lastPost);*/
+//-------------------------------------------------
+        /*$post = Post::find(13);
+        echo $post->title.'<br>';
+        foreach ($post->comments as $comment)
+        {
+            echo $comment->content.'<br>';
+
+        }*/
+
+
+
+
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
