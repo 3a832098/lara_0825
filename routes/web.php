@@ -24,9 +24,12 @@ use App\Models\Post;
            'title' => "test title",
            'content' => 'test content',
         ]);*/
+//查詢資料
+        /*$posts = Post::all();
+        dd($posts);*/
 
-        $posts = Post::all();
-        dd($posts);
+        $post = Post::find(1);
+        dd($post);
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
