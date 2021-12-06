@@ -51,8 +51,11 @@ use App\Models\Post;
         //Post::destroy(2);
         //Post::destroy(12,15,19);
 //-------------------------------------------------
-        $allPosts = Post::all();
-        dd($allPosts);
+        /*$allPosts = Post::all();
+        dd($allPosts);*/
+
+        $featurePosts = Post::where('is_feature', 1)->get();
+        dd($featurePosts);
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
