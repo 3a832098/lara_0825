@@ -45,8 +45,12 @@ use App\Models\Post;
         $post ->content = 'saved content';
         $post -> save();*/
 //刪除資料
-        $post = Post::find(1);
-        $post ->delete();
+        /*$post = Post::find(1);
+        $post ->delete();*/
+
+        Post::destroy(2);
+
+
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
