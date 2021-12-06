@@ -40,10 +40,13 @@ use App\Models\Post;
             'content' => 'updated content',
         ]);*/
 
-        $post = Post::find(1);
+        /*$post = Post::find(1);
         $post ->title = 'saved title';
         $post ->content = 'saved content';
-        $post -> save();
+        $post -> save();*/
+//刪除資料
+        $post = Post::find(1);
+        $post ->delete();
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
