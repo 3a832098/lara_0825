@@ -57,8 +57,12 @@ use App\Models\Post;
         /*$featurePosts = Post::where('is_feature', 1)->get();
         dd($featurePosts);*/
 
-        $fourthPost = Post::find(13);
-        dd($fourthPost);
+//取得單一筆貼文(取得Model)
+        /*$fourthPost = Post::find(13);
+        dd($fourthPost);*/
+
+        $lastPost = Post::orderBy('id','DESC')->first();
+        dd($lastPost);
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
