@@ -31,8 +31,15 @@ use App\Models\Post;
         /*$post = Post::find(1);
         dd($post);*/
 
-        $posts = Post::where('id','<', 10)->orderBy('id', 'DESC')->get();
-        dd($posts);
+        /*$posts = Post::where('id','<', 10)->orderBy('id', 'DESC')->get();
+        dd($posts);*/
+//更新資料
+        $post = Post::find(1);
+        $post-> update ([
+            'title'=> 'updated title',
+            'content' => 'updated content',
+
+        ]);
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
