@@ -49,8 +49,10 @@ use App\Models\Post;
         $post ->delete();*/
 
         //Post::destroy(2);
-        Post::destroy(12,15,19);
-
+        //Post::destroy(12,15,19);
+//-------------------------------------------------
+        $allPosts = Post::all();
+        dd($allPosts);
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
