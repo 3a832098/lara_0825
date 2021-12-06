@@ -48,8 +48,8 @@ use App\Models\Post;
         /*$post = Post::find(1);
         $post ->delete();*/
 
-        Post::destroy(2);
-
+        //Post::destroy(2);
+        Post::destroy(12,15,19);
 
     });
 
