@@ -20,10 +20,13 @@ use App\Models\Post;
         $post ->title = 'test title';
         $post ->content = 'test content';
         $post ->save();*/
-        Post::create([
+        /*Post::create([
            'title' => "test title",
            'content' => 'test content',
-        ]);
+        ]);*/
+
+        $posts = Post::all();
+        dd($posts);
     });
 
     Route::get('posts',[PostsController::class,'index'])->name('posts.index');
