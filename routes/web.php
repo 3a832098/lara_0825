@@ -65,13 +65,14 @@ use App\Models\Comment;
         /*$lastPost = Post::orderBy('id','DESC')->first();
         dd($lastPost);*/
 //-------------------------------------------------
-        /*$post = Post::find(13);
+        $post = Post::find(13);
         echo $post->title.'<br>';
         foreach ($post->comments as $comment)
         {
             echo $comment->content.'<br>';
 
-        }*/
+        }
+
 
 
 
