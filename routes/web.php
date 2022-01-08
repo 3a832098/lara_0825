@@ -73,13 +73,12 @@ use App\Models\Comment;
 
         }*/
 
-        $comment = Comment::find(2);
+       /* $comment = Comment::find(2);
         echo $comment -> content.'<br>';
         $post = $comment->post;
         echo $post ->id.'<br>';
         echo $post ->title.'<br>';
-        echo $post ->content.'<br>';
-
+        echo $post ->content.'<br>';*/
 
 
     });
